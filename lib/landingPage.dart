@@ -76,6 +76,7 @@ class _LandingPageState extends State<LandingPage> {
       ),
       bottomNavigationBar: CurvedNavigationBar(
         animationCurve: Curves.easeIn,
+        animationDuration: Duration(milliseconds: 300),
         color: Colors.green,
         buttonBackgroundColor: Colors.white,
         backgroundColor: Colors.transparent,
