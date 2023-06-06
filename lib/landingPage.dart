@@ -6,7 +6,7 @@ import 'package:shoffz/AccountPage.dart';
 import 'package:shoffz/HomePage.dart';
 import 'package:shoffz/MyFavPage.dart';
 import 'package:shoffz/RentPage.dart';
-import 'package:shoffz/SellPage.dart';
+
 import 'package:shoffz/profile.dart';
 
 class LandingPage extends StatefulWidget {
