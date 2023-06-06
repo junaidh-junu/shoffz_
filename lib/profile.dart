@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+String? appbartext = "Profile";
+
 class profile extends StatelessWidget {
   profile({super.key});
   final double borderRadius = 25;
@@ -9,11 +11,11 @@ class profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.green,
-        title: Text("Profile"),
-        centerTitle: true,
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.green,
+      //   title: Text("$appbartext"),
+      //   centerTitle: true,
+      // ),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,

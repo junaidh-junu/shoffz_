@@ -5,6 +5,7 @@ import 'package:shoffz/AccountPage.dart';
 import 'package:shoffz/HomePage.dart';
 import 'package:shoffz/MyFavPage.dart';
 import 'package:shoffz/SellPage.dart';
+import 'package:shoffz/profile.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -19,8 +20,10 @@ class _LandingPageState extends State<LandingPage> {
     HomePage(),
     SellPage(),
     MyFavPage(),
-    AccountPage()
+    profile()
   ];
+
+  String? _appbartext = "Shoffz";
 
   @override
   void _onItemTapped(int index) {
@@ -60,8 +63,7 @@ class _LandingPageState extends State<LandingPage> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
               icon: Icon(Icons.home),
-              label: ("Home"),
-            
+              label: ("$appbartext"),
               backgroundColor: Colors.green),
           BottomNavigationBarItem(
               icon: Icon(Icons.add_circle_outline_rounded),
