@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         children: [
           Container(
-            color: const Color.fromARGB(255, 212, 210, 210),
+            color: Color.fromARGB(255, 169, 165, 165),
             child: Row(
               children: [
                 SizedBox(width: 20),

@@ -18,11 +18,11 @@ class _SignUpPageState extends State<SignUpPage> {
         fit: StackFit.passthrough,
         children: <Widget>[
           Container(
-            decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/background2.jpg"),
-                    fit: BoxFit.cover)),
-          ),
+              // decoration: const BoxDecoration(
+              //     image: DecorationImage(
+              //         image: AssetImage("assets/background2.jpg"),
+              //         fit: BoxFit.cover)),
+              ),
           Positioned(
             top: 100,
             left: 40,

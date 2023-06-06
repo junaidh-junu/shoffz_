@@ -11,10 +11,10 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/background2.jpg"),
-                fit: BoxFit.cover)),
+        // decoration: const BoxDecoration(
+        //     image: DecorationImage(
+        //         image: AssetImage("assets/background2.jpg"),
+        //         fit: BoxFit.cover)),
         child: Stack(
           fit: StackFit.passthrough,
           children: <Widget>[
