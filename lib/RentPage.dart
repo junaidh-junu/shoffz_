@@ -11,9 +11,100 @@ class _RentPageState extends State<RentPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
-        children: [Text("Sell page")],
-      ),
-    );
+        child: Column(children: [
+      Container(
+          width: 350,
+          height: 800,
+          padding: EdgeInsets.all(15),
+          child: GridView.count(
+            crossAxisCount: 2,
+            children: <Widget>[
+              SizedBox.fromSize(
+                size: Size(26, 10), // button width and height
+                child: InkWell(
+                  splashColor: Colors.green, // splash color
+                  onTap: () {}, // button pressed
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.tv), // icon
+                      Text("Electronics"), // text
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox.fromSize(
+                size: Size(26, 10), // button width and height
+                child: InkWell(
+                  splashColor: Colors.green, // splash color
+                  onTap: () {}, // button pressed
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.tv), // icon
+                      Text("Electronics"), // text
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox.fromSize(
+                size: Size(26, 10), // button width and height
+                child: InkWell(
+                  splashColor: Colors.green, // splash color
+                  onTap: () {}, // button pressed
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.tv), // icon
+                      Text("Electronics"), // text
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox.fromSize(
+                size: Size(26, 10), // button width and height
+                child: InkWell(
+                  splashColor: Colors.green, // splash color
+                  onTap: () {}, // button pressed
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.tv), // icon
+                      Text("Electronics"), // text
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox.fromSize(
+                size: Size(26, 10), // button width and height
+                child: InkWell(
+                  splashColor: Colors.green, // splash color
+                  onTap: () {}, // button pressed
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.tv), // icon
+                      Text("Electronics"), // text
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox.fromSize(
+                size: Size(26, 10), // button width and height
+                child: InkWell(
+                  splashColor: Colors.green, // splash color
+                  onTap: () {}, // button pressed
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.tv), // icon
+                      Text("Electronics"), // text
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ))
+    ]));
   }
 }
