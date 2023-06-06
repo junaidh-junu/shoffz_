@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SellPage extends StatefulWidget {
-  const SellPage({super.key});
+class RentPage extends StatefulWidget {
+  const RentPage({super.key});
 
   @override
-  State<SellPage> createState() => _SellPageState();
+  State<RentPage> createState() => _RentPageState();
 }
 
-class _SellPageState extends State<SellPage> {
+class _RentPageState extends State<RentPage> {
   @override
   Widget build(BuildContext context) {
     return Container(

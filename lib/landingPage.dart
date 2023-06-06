@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:shoffz/AccountPage.dart';
 import 'package:shoffz/HomePage.dart';
 import 'package:shoffz/MyFavPage.dart';
+import 'package:shoffz/RentPage.dart';
 import 'package:shoffz/SellPage.dart';
 import 'package:shoffz/profile.dart';
 
@@ -18,7 +19,7 @@ class _LandingPageState extends State<LandingPage> {
   int _SelectedIndex = 0;
   static List<Widget> _WidgetOption = <Widget>[
     HomePage(),
-    SellPage(),
+    RentPage(),
     MyFavPage(),
     profile()
   ];
@@ -62,7 +63,7 @@ class _LandingPageState extends State<LandingPage> {
               backgroundColor: Colors.green),
           BottomNavigationBarItem(
               icon: Icon(Icons.add_circle_outline_rounded),
-              label: ("Sell"),
+              label: ("Rent"),
               backgroundColor: Colors.green),
           BottomNavigationBarItem(
               icon: Icon(Icons.favorite_outline_outlined),
