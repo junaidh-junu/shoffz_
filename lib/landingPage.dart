@@ -39,11 +39,6 @@ class _LandingPageState extends State<LandingPage> {
         backgroundColor: Colors.green,
         title: Text("shoffz"),
         centerTitle: true,
-        leading: IconButton(
-            onPressed: () {
-              print("menu pressed");
-            },
-            icon: Icon(Icons.menu)),
         actions: [
           Padding(
             padding: EdgeInsets.only(right: 20),
@@ -63,7 +58,7 @@ class _LandingPageState extends State<LandingPage> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
               icon: Icon(Icons.home),
-              label: ("$appbartext"),
+              label: ("Home"),
               backgroundColor: Colors.green),
           BottomNavigationBarItem(
               icon: Icon(Icons.add_circle_outline_rounded),

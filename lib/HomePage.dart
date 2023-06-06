@@ -116,9 +116,11 @@ class _HomePageState extends State<HomePage> {
               height: 20,
             ),
             Container(
-              height: 1000,
+              height: 900,
               padding: EdgeInsets.all(10),
               child: GridView.builder(
+                physics: ScrollPhysics(),
+                // scrollDirection: Axis.vertical,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 4,
