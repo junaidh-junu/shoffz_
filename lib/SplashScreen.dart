@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:shoffz/SignInPage.dart';
 import 'package:shoffz/SignUpPage.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -17,14 +18,14 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
         const Duration(seconds: 2),
         () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => SignUpPage())));
+            context, MaterialPageRoute(builder: (context) => SignInPage())));
   }
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.yellow,
-      child: Image.asset("assets/.jpg"),
+      color: Colors.grey,
+      child: Image.asset("assets/background2.jpg"),
       // child: FlutterLogo(size: MediaQuery.of(context).size.height),
     );
   }
