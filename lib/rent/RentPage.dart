@@ -40,12 +40,7 @@ class _RentPageState extends State<RentPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Image.asset(
-                          "assets/electronic-devicesout.png",
-                          height: 60,
-                          width: 60,
-                          color: Colors.white,
-                        ), // icon
+                        Icon(Icons.tv), // icon
                         Text("Electronics"), // text
                       ],
                     ),
@@ -65,14 +60,8 @@ class _RentPageState extends State<RentPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Image.asset(
-                          "assets/rental.png",
-                          height: 60,
-                          width: 60,
-                          color: Colors.white,
-                        ), // icon
-
-                        Text("vehicles"), // text
+                        Icon(Icons.abc), // icon
+                        Text("Electronics"), // text
                       ],
                     ),
                   ),
@@ -91,13 +80,8 @@ class _RentPageState extends State<RentPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Image.asset(
-                          "assets/book.png",
-                          height: 60,
-                          width: 60,
-                          color: Colors.white,
-                        ), //  // icon
-                        Text("Books"), // text
+                        Icon(Icons.tv), // icon
+                        Text("Electronics"), // text
                       ],
                     ),
                   ),
@@ -116,13 +100,8 @@ class _RentPageState extends State<RentPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Image.asset(
-                          "assets/furniture.png",
-                          height: 60,
-                          width: 60,
-                          color: Colors.white,
-                        ), // text
-                        Text("Furniture"),
+                        Icon(Icons.tv), // icon
+                        Text("Electronics"), // text
                       ],
                     ),
                   ),
@@ -141,14 +120,8 @@ class _RentPageState extends State<RentPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Image.asset(
-                          "assets/property.png",
-                          height: 60,
-                          width: 60,
-                          color: Colors.white,
-                        ), // icon
-                        Text("Properties"),
-                        // text
+                        Icon(Icons.tv), // icon
+                        Text("Electronics"), // text
                       ],
                     ),
                   ),
@@ -167,13 +140,8 @@ class _RentPageState extends State<RentPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Image.asset(
-                          "assets/tools.png",
-                          height: 60,
-                          width: 60,
-                          color: Colors.white,
-                        ),
-                        Text("Tools"), // text
+                        Icon(Icons.tv), // icon
+                        Text("Electronics"), // text
                       ],
                     ),
                   ),
