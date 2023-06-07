@@ -28,8 +28,10 @@ class _RentPageState extends State<RentPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Icon(Icons.tv), // icon
-                        Text("Electronics"), // text
+                        Image.asset(
+                          "assets/icons/responsive.png",
+                          height: 64,
+                        )
                       ],
                     ),
                   ),
@@ -42,36 +44,8 @@ class _RentPageState extends State<RentPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Icon(Icons.car), // icon
-                        Text("Electronics"), // text
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox.fromSize(
-                  size: Size(26, 10), // button width and height
-                  child: InkWell(
-                    splashColor: Colors.green, // splash color
-                    onTap: () {}, // button pressed
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Icon(Icons.tv), // icon
-                        Text("Electronics"), // text
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox.fromSize(
-                  size: Size(26, 10), // button width and height
-                  child: InkWell(
-                    splashColor: Colors.green, // splash color
-                    onTap: () {}, // button pressed
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Icon(Icons.tv), // icon
-                        Text("Electronics"), // text
+                        Icon(Icons.abc), // icon
+                        Text("Vehicles"), // text
                       ],
                     ),
                   ),
@@ -85,7 +59,7 @@ class _RentPageState extends State<RentPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(Icons.tv), // icon
-                        Text("Electronics"), // text
+                        Text("properties"), // text
                       ],
                     ),
                   ),
@@ -99,7 +73,35 @@ class _RentPageState extends State<RentPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(Icons.tv), // icon
-                        Text("Electronics"), // text
+                        Text("Tools"), // text
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox.fromSize(
+                  size: Size(26, 10), // button width and height
+                  child: InkWell(
+                    splashColor: Colors.green, // splash color
+                    onTap: () {}, // button pressed
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(Icons.tv), // icon
+                        Text("Books"), // text
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox.fromSize(
+                  size: Size(26, 10), // button width and height
+                  child: InkWell(
+                    splashColor: Colors.green, // splash color
+                    onTap: () {}, // button pressed
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(Icons.tv), // icon
+                        Text("Furniture"), // text
                       ],
                     ),
                   ),

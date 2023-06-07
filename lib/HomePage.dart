@@ -1,6 +1,8 @@
 // ignore_for_file: dead_code
 
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 List<String> images = [
   "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
@@ -12,6 +14,14 @@ List<String> images = [
   "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
   "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
 ];
+
+int activeIndex = 0;
+Widget buildIndicator() => AnimatedSmoothIndicator(
+      activeIndex: activeIndex,
+      count: images.length,
+      effect: JumpingDotEffect(
+          dotHeight: 8, dotWidth: 8, activeDotColor: Colors.green),
+    );
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -114,6 +124,108 @@ class _HomePageState extends State<HomePage> {
             ),
             SizedBox(
               height: 20,
+            ),
+            Container(
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CarouselSlider(
+                        items: [
+                          Container(
+                            margin: EdgeInsets.all(6.0),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+                                ),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.all(6.0),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+                                ),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.all(6.0),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+                                ),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.all(6.0),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+                                ),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.all(6.0),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+                                ),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.all(6.0),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+                                ),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          )
+                        ],
+                        options: CarouselOptions(
+                            height: 200,
+                            aspectRatio: 16 / 9,
+                            autoPlay: true,
+                            viewportFraction: 1,
+                            autoPlayAnimationDuration:
+                                Duration(milliseconds: 500),
+                            onPageChanged: (index, reason) =>
+                                setState(() => activeIndex = index))),
+                    // CarouselSlider.builder(
+                    //     itemCount: images.length,
+                    //     itemBuilder: (context, index, realIndex) {
+                    //       final image = images[index];
+
+                    //       return buildImage(image, index);
+                    //     },
+                    const SizedBox(height: 20),
+                    buildIndicator(),
+                  ],
+                ),
+              ),
             ),
             Container(
               height: 900,
