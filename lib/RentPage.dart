@@ -14,44 +14,20 @@ class _RentPageState extends State<RentPage> {
       child: Container(
           child: Column(children: [
         Container(
-            width: 350,
+            width: 450,
             height: 800,
             padding: EdgeInsets.all(15),
             child: GridView.count(
               crossAxisCount: 2,
               children: <Widget>[
-                SizedBox.fromSize(
-                  size: Size(26, 10), // button width and height
-                  child: InkWell(
-                    splashColor: Colors.green, // splash color
-                    onTap: () {}, // button pressed
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Image.asset(
-                          "assets/icons/responsive.png",
-                          height: 64,
-                        )
-                      ],
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      // top: BorderSide(width: 1.0, color: Colors.white38),
+                      bottom: BorderSide(width: 1.0, color: Colors.white38),
+                      right: BorderSide(width: 1.0, color: Colors.white38),
                     ),
                   ),
-                ),
-                SizedBox.fromSize(
-                  size: Size(26, 10), // button width and height
-                  child: InkWell(
-                    splashColor: Colors.green, // splash color
-                    onTap: () {}, // button pressed
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Icon(Icons.abc), // icon
-                        Text("Vehicles"), // text
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox.fromSize(
-                  size: Size(26, 10), // button width and height
                   child: InkWell(
                     splashColor: Colors.green, // splash color
                     onTap: () {}, // button pressed
@@ -59,13 +35,39 @@ class _RentPageState extends State<RentPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(Icons.tv), // icon
-                        Text("properties"), // text
+                        Text("Electronics"), // text
                       ],
                     ),
                   ),
                 ),
-                SizedBox.fromSize(
-                  size: Size(26, 10), // button width and height
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      // top: BorderSide(width: 1.0, color: Colors.white38),
+                      bottom: BorderSide(width: 1.0, color: Colors.white38),
+                      left: BorderSide(width: 1.0, color: Colors.white38),
+                    ),
+                  ),
+                  child: InkWell(
+                    splashColor: Colors.green, // splash color
+                    onTap: () {}, // button pressed
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(Icons.car), // icon
+                        Text("Electronics"), // text
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      top: BorderSide(width: 1.0, color: Colors.white38),
+                      bottom: BorderSide(width: 1.0, color: Colors.white38),
+                      right: BorderSide(width: 1.0, color: Colors.white38),
+                    ),
+                  ),
                   child: InkWell(
                     splashColor: Colors.green, // splash color
                     onTap: () {}, // button pressed
@@ -73,13 +75,19 @@ class _RentPageState extends State<RentPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(Icons.tv), // icon
-                        Text("Tools"), // text
+                        Text("Electronics"), // text
                       ],
                     ),
                   ),
                 ),
-                SizedBox.fromSize(
-                  size: Size(26, 10), // button width and height
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      top: BorderSide(width: 1.0, color: Colors.white38),
+                      bottom: BorderSide(width: 1.0, color: Colors.white38),
+                      left: BorderSide(width: 1.0, color: Colors.white38),
+                    ),
+                  ),
                   child: InkWell(
                     splashColor: Colors.green, // splash color
                     onTap: () {}, // button pressed
@@ -87,13 +95,19 @@ class _RentPageState extends State<RentPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(Icons.tv), // icon
-                        Text("Books"), // text
+                        Text("Electronics"), // text
                       ],
                     ),
                   ),
                 ),
-                SizedBox.fromSize(
-                  size: Size(26, 10), // button width and height
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      top: BorderSide(width: 1.0, color: Colors.white38),
+                      // bottom: BorderSide(width: 1.0, color: Colors.white38),
+                      right: BorderSide(width: 1.0, color: Colors.white38),
+                    ),
+                  ),
                   child: InkWell(
                     splashColor: Colors.green, // splash color
                     onTap: () {}, // button pressed
@@ -101,7 +115,27 @@ class _RentPageState extends State<RentPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(Icons.tv), // icon
-                        Text("Furniture"), // text
+                        Text("Electronics"), // text
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      top: BorderSide(width: 1.0, color: Colors.white38),
+                      // bottom: BorderSide(width: 1.0, color: Colors.white38),
+                      left: BorderSide(width: 1.0, color: Colors.white38),
+                    ),
+                  ),
+                  child: InkWell(
+                    splashColor: Colors.green, // splash color
+                    onTap: () {}, // button pressed
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(Icons.tv), // icon
+                        Text("Electronics"), // text
                       ],
                     ),
                   ),
