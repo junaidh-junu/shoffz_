@@ -54,7 +54,7 @@ class _RentPageState extends State<RentPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Icon(Icons.car), // icon
+                        Icon(Icons.abc), // icon
                         Text("Electronics"), // text
                       ],
                     ),
