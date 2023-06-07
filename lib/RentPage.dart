@@ -14,92 +14,160 @@ class _RentPageState extends State<RentPage> {
       child: Container(
           child: Column(children: [
         Container(
-            width: 350,
+            width: 450,
             height: 800,
             padding: EdgeInsets.all(15),
             child: GridView.count(
               crossAxisCount: 2,
               children: <Widget>[
-                SizedBox.fromSize(
-                  size: Size(26, 10), // button width and height
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      // top: BorderSide(width: 1.0, color: Colors.white38),
+                      bottom: BorderSide(width: 1.0, color: Colors.white38),
+                      right: BorderSide(width: 1.0, color: Colors.white38),
+                    ),
+                  ),
                   child: InkWell(
                     splashColor: Colors.green, // splash color
                     onTap: () {}, // button pressed
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Icon(Icons.tv), // icon
+                        Image.asset(
+                          "assets/electronic-devicesout.png",
+                          height: 60,
+                          width: 60,
+                          color: Colors.white,
+                        ), // icon
                         Text("Electronics"), // text
                       ],
                     ),
                   ),
                 ),
-                SizedBox.fromSize(
-                  size: Size(26, 10), // button width and height
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      // top: BorderSide(width: 1.0, color: Colors.white38),
+                      bottom: BorderSide(width: 1.0, color: Colors.white38),
+                      left: BorderSide(width: 1.0, color: Colors.white38),
+                    ),
+                  ),
                   child: InkWell(
                     splashColor: Colors.green, // splash color
                     onTap: () {}, // button pressed
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Icon(Icons.car), // icon
-                        Text("Electronics"), // text
+                        Image.asset(
+                          "assets/rental.png",
+                          height: 60,
+                          width: 60,
+                          color: Colors.white,
+                        ), // icon
+
+                        Text("vehicles"), // text
                       ],
                     ),
                   ),
                 ),
-                SizedBox.fromSize(
-                  size: Size(26, 10), // button width and height
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      top: BorderSide(width: 1.0, color: Colors.white38),
+                      bottom: BorderSide(width: 1.0, color: Colors.white38),
+                      right: BorderSide(width: 1.0, color: Colors.white38),
+                    ),
+                  ),
                   child: InkWell(
                     splashColor: Colors.green, // splash color
                     onTap: () {}, // button pressed
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Icon(Icons.tv), // icon
-                        Text("Electronics"), // text
+                        Image.asset(
+                          "assets/book.png",
+                          height: 60,
+                          width: 60,
+                          color: Colors.white,
+                        ), //  // icon
+                        Text("Books"), // text
                       ],
                     ),
                   ),
                 ),
-                SizedBox.fromSize(
-                  size: Size(26, 10), // button width and height
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      top: BorderSide(width: 1.0, color: Colors.white38),
+                      bottom: BorderSide(width: 1.0, color: Colors.white38),
+                      left: BorderSide(width: 1.0, color: Colors.white38),
+                    ),
+                  ),
                   child: InkWell(
                     splashColor: Colors.green, // splash color
                     onTap: () {}, // button pressed
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Icon(Icons.tv), // icon
-                        Text("Electronics"), // text
+                        Image.asset(
+                          "assets/furniture.png",
+                          height: 60,
+                          width: 60,
+                          color: Colors.white,
+                        ), // text
+                        Text("Furniture"),
                       ],
                     ),
                   ),
                 ),
-                SizedBox.fromSize(
-                  size: Size(26, 10), // button width and height
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      top: BorderSide(width: 1.0, color: Colors.white38),
+                      // bottom: BorderSide(width: 1.0, color: Colors.white38),
+                      right: BorderSide(width: 1.0, color: Colors.white38),
+                    ),
+                  ),
                   child: InkWell(
                     splashColor: Colors.green, // splash color
                     onTap: () {}, // button pressed
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Icon(Icons.tv), // icon
-                        Text("Electronics"), // text
+                        Image.asset(
+                          "assets/property.png",
+                          height: 60,
+                          width: 60,
+                          color: Colors.white,
+                        ), // icon
+                        Text("Properties"),
+                        // text
                       ],
                     ),
                   ),
                 ),
-                SizedBox.fromSize(
-                  size: Size(26, 10), // button width and height
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      top: BorderSide(width: 1.0, color: Colors.white38),
+                      // bottom: BorderSide(width: 1.0, color: Colors.white38),
+                      left: BorderSide(width: 1.0, color: Colors.white38),
+                    ),
+                  ),
                   child: InkWell(
                     splashColor: Colors.green, // splash color
                     onTap: () {}, // button pressed
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Icon(Icons.tv), // icon
-                        Text("Electronics"), // text
+                        Image.asset(
+                          "assets/tools.png",
+                          height: 60,
+                          width: 60,
+                          color: Colors.white,
+                        ),
+                        Text("Tools"), // text
                       ],
                     ),
                   ),
