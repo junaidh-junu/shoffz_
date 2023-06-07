@@ -32,7 +32,7 @@ class _RentPageState extends State<RentPage> {
                   child: InkWell(
                     splashColor: Colors.green, // splash color
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) => RentElectronics()));
@@ -40,7 +40,12 @@ class _RentPageState extends State<RentPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Icon(Icons.tv), // icon
+                        Image.asset(
+                          "assets/electronic-devicesout.png",
+                          height: 60,
+                          width: 60,
+                          color: Colors.white,
+                        ), // icon
                         Text("Electronics"), // text
                       ],
                     ),
@@ -60,8 +65,14 @@ class _RentPageState extends State<RentPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Icon(Icons.abc), // icon
-                        Text("Electronics"), // text
+                        Image.asset(
+                          "assets/rental.png",
+                          height: 60,
+                          width: 60,
+                          color: Colors.white,
+                        ), // icon
+
+                        Text("vehicles"), // text
                       ],
                     ),
                   ),
@@ -80,8 +91,13 @@ class _RentPageState extends State<RentPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Icon(Icons.tv), // icon
-                        Text("Electronics"), // text
+                        Image.asset(
+                          "assets/book.png",
+                          height: 60,
+                          width: 60,
+                          color: Colors.white,
+                        ), //  // icon
+                        Text("Books"), // text
                       ],
                     ),
                   ),
@@ -100,8 +116,13 @@ class _RentPageState extends State<RentPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Icon(Icons.tv), // icon
-                        Text("Electronics"), // text
+                        Image.asset(
+                          "assets/furniture.png",
+                          height: 60,
+                          width: 60,
+                          color: Colors.white,
+                        ), // text
+                        Text("Furniture"),
                       ],
                     ),
                   ),
@@ -120,8 +141,14 @@ class _RentPageState extends State<RentPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Icon(Icons.tv), // icon
-                        Text("Electronics"), // text
+                        Image.asset(
+                          "assets/property.png",
+                          height: 60,
+                          width: 60,
+                          color: Colors.white,
+                        ), // icon
+                        Text("Properties"),
+                        // text
                       ],
                     ),
                   ),
@@ -140,8 +167,13 @@ class _RentPageState extends State<RentPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Icon(Icons.tv), // icon
-                        Text("Electronics"), // text
+                        Image.asset(
+                          "assets/tools.png",
+                          height: 60,
+                          width: 60,
+                          color: Colors.white,
+                        ),
+                        Text("Tools"), // text
                       ],
                     ),
                   ),

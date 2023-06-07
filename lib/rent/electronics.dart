@@ -25,8 +25,9 @@ class RentElectronics extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(
             onPressed: () {
-              Navigator.pushReplacement(
-                  context, MaterialPageRoute(builder: (context) => RentPage()));
+              Navigator.of(context).pop();
+              // Navigator.pushReplacement(context,
+              //     MaterialPageRoute(builder: (context) => LandingPage()));
             },
             icon: Icon(Icons.arrow_back)),
       ),
