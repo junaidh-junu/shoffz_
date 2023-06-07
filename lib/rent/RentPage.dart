@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoffz/rent/electronics.dart';
 
 class RentPage extends StatefulWidget {
   const RentPage({super.key});
@@ -30,7 +31,12 @@ class _RentPageState extends State<RentPage> {
                   ),
                   child: InkWell(
                     splashColor: Colors.green, // splash color
-                    onTap: () {}, // button pressed
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RentElectronics()));
+                    }, // button pressed
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[

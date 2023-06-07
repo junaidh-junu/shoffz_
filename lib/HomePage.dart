@@ -21,6 +21,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  String? appbartext = "Shoffz";
   String? dropvalue = "Palarivattom";
   var drop_location = ["Palarivattom", "Kaloor", "Edapally", "Aluva"];
 

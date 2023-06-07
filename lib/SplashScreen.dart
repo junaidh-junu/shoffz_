@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:shoffz/SignInPage.dart';
-import 'package:shoffz/SignUpPage.dart';
+
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
