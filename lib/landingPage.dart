@@ -2,12 +2,13 @@
 
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:shoffz/AccountPage.dart';
+
 import 'package:shoffz/HomePage.dart';
 import 'package:shoffz/MyFavPage.dart';
-import 'package:shoffz/RentPage.dart';
+import 'package:shoffz/rent/RentPage.dart';
 
 import 'package:shoffz/profile.dart';
+import 'package:shoffz/rent/electronics.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -22,10 +23,11 @@ class _LandingPageState extends State<LandingPage> {
     HomePage(),
     RentPage(),
     MyFavPage(),
-    profile()
+    profile(),
+    
   ];
 
-  String? _appbartext = "Shoffz";
+
 
   final navigationitems = <Widget>[
     Icon(
@@ -59,7 +61,7 @@ class _LandingPageState extends State<LandingPage> {
       extendBody: true,
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: Text("shoffz"),
+        title: Text("$appbartext"),
         centerTitle: true,
         actions: [
           Padding(
