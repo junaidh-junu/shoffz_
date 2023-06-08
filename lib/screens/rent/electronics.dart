@@ -44,12 +44,12 @@ class _ElectronicRentalState extends State<ElectronicRental> {
             children: [
               TextField(
                 controller: _nameController,
-                decoration: InputDecoration(labelText: 'Name'),
+                decoration: InputDecoration(labelText: 'Title of Ad'),
               ),
               SizedBox(height: 16.0),
               TextField(
                 controller: _modelController,
-                decoration: InputDecoration(labelText: 'Model'),
+                decoration: InputDecoration(labelText: 'Description'),
               ),
               SizedBox(height: 16.0),
               ElevatedButton(
