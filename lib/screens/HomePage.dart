@@ -1,4 +1,4 @@
-// ignore_for_file: dead_code
+// ignore_for_file: dead_code, prefer_const_constructors
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -82,46 +82,183 @@ class _HomePageState extends State<HomePage> {
             //   height: 50,
             // ),
             Container(
-              child: Row(
-                children: [
-                  SizedBox(
-                    width: 30,
-                    height: 50,
-                  ),
-                  Column(
-                    children: [
-                      IconButton(
-                        onPressed: () {
-                          print("icon button pressed");
-                        },
-                        icon: Icon(Icons.camera_alt),
-                        color: Colors.green,
-                      ),
-                      Text(
-                        "Electronics",
-                        style: TextStyle(color: Colors.green),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Column(
-                    children: [
-                      IconButton(
-                        onPressed: () {
-                          print("icon button pressed");
-                        },
-                        icon: Icon(Icons.camera_alt),
-                        color: Colors.green,
-                      ),
-                      Text(
-                        "Electronics",
-                        style: TextStyle(color: Colors.green),
-                      )
-                    ],
-                  ),
-                ],
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    SizedBox(
+                      // width: 10,
+                      height: 50,
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          child: InkWell(
+                            splashColor: Colors.green, // splash color
+                            onTap: () {}, // button pressed
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  "assets/electronic-devicesout.png",
+                                  height: 35,
+                                  width: 35,
+                                  color: Colors.white,
+                                ), // icon
+                                Text("Electronics"), // text
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          child: InkWell(
+                            splashColor: Colors.green, // splash color
+                            onTap: () {}, // button pressed
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  "assets/rental.png",
+                                  height: 35,
+                                  width: 35,
+                                  color: Colors.white,
+                                ), // icon
+
+                                Text("vehicles"), // text
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          child: InkWell(
+                            splashColor: Colors.green, // splash color
+                            onTap: () {}, // button pressed
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  "assets/book.png",
+                                  height: 35,
+                                  width: 35,
+                                  color: Colors.white,
+                                ), //  // icon
+                                Text("Books"), // text
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          child: InkWell(
+                            splashColor: Colors.green, // splash color
+                            onTap: () {}, // button pressed
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  "assets/furniture.png",
+                                  height: 35,
+                                  width: 35,
+                                  color: Colors.white,
+                                ), // text
+                                Text("Furniture"),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          child: InkWell(
+                            splashColor: Colors.green, // splash color
+                            onTap: () {}, // button pressed
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  "assets/property.png",
+                                  height: 35,
+                                  width: 35,
+                                  color: Colors.white,
+                                ), // icon
+                                Text("Properties"),
+                                // text
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          child: InkWell(
+                            splashColor: Colors.green, // splash color
+                            onTap: () {}, // button pressed
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  "assets/tools.png",
+                                  height: 35,
+                                  width: 35,
+                                  color: Colors.white,
+                                ),
+                                Text("Tools"), // text
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
             SizedBox(
@@ -239,7 +376,6 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             ),
-            
           ],
         ),
       ),
