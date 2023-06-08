@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shoffz/rent/electronics.dart';
+import 'package:shoffz/screens/rent/electronics.dart';
 
 class RentPage extends StatefulWidget {
   const RentPage({super.key});

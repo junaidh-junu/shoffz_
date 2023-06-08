@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shoffz/landingPage.dart';
-import 'package:shoffz/rent/RentPage.dart';
+import 'package:shoffz/screens/landingPage.dart';
+import 'package:shoffz/screens/rent/RentPage.dart';
 
 List<String> images = [
   "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",

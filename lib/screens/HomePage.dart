@@ -38,6 +38,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      physics: const ScrollPhysics(),
       scrollDirection: Axis.vertical,
       child: Container(
         child: Column(
@@ -215,13 +216,6 @@ class _HomePageState extends State<HomePage> {
                                 Duration(milliseconds: 500),
                             onPageChanged: (index, reason) =>
                                 setState(() => activeIndex = index))),
-                    // CarouselSlider.builder(
-                    //     itemCount: images.length,
-                    //     itemBuilder: (context, index, realIndex) {
-                    //       final image = images[index];
-
-                    //       return buildImage(image, index);
-                    //     },
                     const SizedBox(height: 20),
                     buildIndicator(),
                   ],
@@ -230,9 +224,9 @@ class _HomePageState extends State<HomePage> {
             ),
             Container(
               height: 900,
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: GridView.builder(
-                physics: ScrollPhysics(),
+                // physics: const ScrollPhysics(),
                 // scrollDirection: Axis.vertical,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,

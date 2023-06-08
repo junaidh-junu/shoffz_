@@ -3,12 +3,12 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
-import 'package:shoffz/HomePage.dart';
-import 'package:shoffz/MyFavPage.dart';
-import 'package:shoffz/rent/RentPage.dart';
+import 'package:shoffz/screens/HomePage.dart';
+import 'package:shoffz/screens/MyFavPage.dart';
+import 'package:shoffz/screens/rent/RentPage.dart';
 
-import 'package:shoffz/profile.dart';
-import 'package:shoffz/rent/electronics.dart';
+import 'package:shoffz/screens/profile.dart';
+import 'package:shoffz/screens/rent/electronics.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -24,10 +24,7 @@ class _LandingPageState extends State<LandingPage> {
     RentPage(),
     MyFavPage(),
     profile(),
-    
   ];
-
-
 
   final navigationitems = <Widget>[
     Icon(
@@ -79,6 +76,7 @@ class _LandingPageState extends State<LandingPage> {
       ),
       bottomNavigationBar: CurvedNavigationBar(
         animationCurve: Curves.easeIn,
+        height: 50,
         animationDuration: Duration(milliseconds: 300),
         color: Colors.green,
         buttonBackgroundColor: Colors.white,
