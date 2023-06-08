@@ -1,4 +1,4 @@
-// ignore_for_file: dead_code, prefer_const_constructors, avoid_unnecessary_containers, non_constant_identifier_names, avoid_print
+// ignore_for_file: dead_code
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -53,15 +53,15 @@ class _HomePageState extends State<HomePage> {
                     height: 10,
                     width: 10,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 10,
                   ),
-                  const Text(
+                  Text(
                     "Palarivattom,kochi",
                     style: TextStyle(),
                   ),
-                  const SizedBox(
-                    width: 100,
+                  SizedBox(
+                    width: 70,
                   ),
                   DropdownButton(
                       value: dropvalue,
@@ -75,6 +75,52 @@ class _HomePageState extends State<HomePage> {
                           dropvalue = newval;
                         });
                       })
+                ],
+              ),
+            ),
+            // SizedBox(
+            //   height: 50,
+            // ),
+            Container(
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 30,
+                    height: 50,
+                  ),
+                  Column(
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          print("icon button pressed");
+                        },
+                        icon: Icon(Icons.camera_alt),
+                        color: Colors.green,
+                      ),
+                      Text(
+                        "Electronics",
+                        style: TextStyle(color: Colors.green),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          print("icon button pressed");
+                        },
+                        icon: Icon(Icons.camera_alt),
+                        color: Colors.green,
+                      ),
+                      Text(
+                        "Electronics",
+                        style: TextStyle(color: Colors.green),
+                      )
+                    ],
+                  ),
                 ],
               ),
             ),
