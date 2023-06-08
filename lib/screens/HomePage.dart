@@ -2,6 +2,7 @@
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 List<String> images = [
@@ -180,7 +181,7 @@ class _HomePageState extends State<HomePage> {
               height: 900,
               padding: const EdgeInsets.all(10),
               child: GridView.builder(
-                // physics: const ScrollPhysics(),
+                physics: ScrollPhysics(),
                 // scrollDirection: Axis.vertical,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
@@ -192,7 +193,8 @@ class _HomePageState extends State<HomePage> {
                   return Image.network(images[index]);
                 },
               ),
-            )
+            ),
+            
           ],
         ),
       ),
