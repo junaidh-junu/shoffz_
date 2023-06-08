@@ -37,7 +37,7 @@ class _RentPageState extends State<RentPage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => RentElectronics()));
+                              builder: (context) => ElectronicRental()));
                     }, // button pressed
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
