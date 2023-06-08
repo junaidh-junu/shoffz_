@@ -2,7 +2,6 @@
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 List<String> images = [

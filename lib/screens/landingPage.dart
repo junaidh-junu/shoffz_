@@ -2,7 +2,6 @@
 
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 import 'package:shoffz/screens/HomePage.dart';
 import 'package:shoffz/screens/MyFavPage.dart';
