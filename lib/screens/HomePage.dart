@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      physics: const ScrollPhysics(),
+      // physics: const ScrollPhysics(),
       scrollDirection: Axis.vertical,
       child: Container(
         child: Column(
@@ -369,7 +369,7 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.all(10),
               child: GridView.builder(
                 // physics: const ScrollPhysics(),
-                // scrollDirection: Axis.vertical,
+                scrollDirection: Axis.vertical,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 4,
@@ -380,8 +380,7 @@ class _HomePageState extends State<HomePage> {
                   return Image.network(images[index]);
                 },
               ),
-            ),
-            
+            )
           ],
         ),
       ),
