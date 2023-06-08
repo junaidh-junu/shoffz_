@@ -13,6 +13,10 @@ List<String> images = [
   "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
   "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
   "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
 ];
 
 int activeIndex = 0;
@@ -41,159 +45,161 @@ class _HomePageState extends State<HomePage> {
       physics: const ScrollPhysics(),
       scrollDirection: Axis.vertical,
       child: Container(
-        child: Column(
-          children: [
-            Container(
-              color: Color.fromARGB(255, 169, 165, 165),
-              child: Row(
-                children: [
-                  SizedBox(width: 20),
-                  Image.asset(
-                    "assets/ic_location.png",
-                    height: 10,
-                    width: 10,
-                  ),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  const Text(
-                    "Palarivattom,kochi",
-                    style: TextStyle(),
-                  ),
-                  const SizedBox(
-                    width: 100,
-                  ),
-                  DropdownButton(
-                      value: dropvalue,
-                      icon: Icon(Icons.arrow_drop_down_sharp),
-                      items: drop_location.map((String drop_location) {
-                        return DropdownMenuItem(
-                            value: drop_location, child: Text(drop_location));
-                      }).toList(),
-                      onChanged: (String? newval) {
-                        setState(() {
-                          dropvalue = newval;
-                        });
-                      })
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+        child: Container(
+          child: Column(
+            children: [
+              Container(
+                color: Color.fromARGB(255, 169, 165, 165),
+                child: Row(
                   children: [
-                    CarouselSlider(
-                        items: [
-                          Container(
-                            margin: EdgeInsets.all(6.0),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.0),
-                              image: DecorationImage(
-                                image: NetworkImage(
-                                  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
-                                ),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.all(6.0),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.0),
-                              image: DecorationImage(
-                                image: NetworkImage(
-                                  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
-                                ),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.all(6.0),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.0),
-                              image: DecorationImage(
-                                image: NetworkImage(
-                                  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
-                                ),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.all(6.0),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.0),
-                              image: DecorationImage(
-                                image: NetworkImage(
-                                  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
-                                ),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.all(6.0),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.0),
-                              image: DecorationImage(
-                                image: NetworkImage(
-                                  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
-                                ),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.all(6.0),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.0),
-                              image: DecorationImage(
-                                image: NetworkImage(
-                                  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
-                                ),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          )
-                        ],
-                        options: CarouselOptions(
-                            height: 200,
-                            aspectRatio: 16 / 9,
-                            autoPlay: true,
-                            viewportFraction: 1,
-                            autoPlayAnimationDuration:
-                                Duration(milliseconds: 500),
-                            onPageChanged: (index, reason) =>
-                                setState(() => activeIndex = index))),
-                    const SizedBox(height: 20),
-                    buildIndicator(),
+                    SizedBox(width: 20),
+                    Image.asset(
+                      "assets/ic_location.png",
+                      height: 10,
+                      width: 10,
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    const Text(
+                      "Palarivattom,kochi",
+                      style: TextStyle(),
+                    ),
+                    const SizedBox(
+                      width: 100,
+                    ),
+                    DropdownButton(
+                        value: dropvalue,
+                        icon: Icon(Icons.arrow_drop_down_sharp),
+                        items: drop_location.map((String drop_location) {
+                          return DropdownMenuItem(
+                              value: drop_location, child: Text(drop_location));
+                        }).toList(),
+                        onChanged: (String? newval) {
+                          setState(() {
+                            dropvalue = newval;
+                          });
+                        })
                   ],
                 ),
               ),
-            ),
-            Container(
-              height: 900,
-              padding: const EdgeInsets.all(10),
-              child: GridView.builder(
-                // physics: const ScrollPhysics(),
-                // scrollDirection: Axis.vertical,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 4,
-                  mainAxisSpacing: 4,
-                ),
-                itemCount: images.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return Image.network(images[index]);
-                },
+              SizedBox(
+                height: 20,
               ),
-            )
-          ],
+              Container(
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CarouselSlider(
+                          items: [
+                            Container(
+                              margin: EdgeInsets.all(6.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                    "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+                                  ),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.all(6.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                    "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+                                  ),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.all(6.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                    "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+                                  ),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.all(6.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                    "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+                                  ),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.all(6.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                    "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+                                  ),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.all(6.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                    "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+                                  ),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            )
+                          ],
+                          options: CarouselOptions(
+                              height: 200,
+                              aspectRatio: 16 / 9,
+                              autoPlay: true,
+                              viewportFraction: 1,
+                              autoPlayAnimationDuration:
+                                  Duration(milliseconds: 500),
+                              onPageChanged: (index, reason) =>
+                                  setState(() => activeIndex = index))),
+                      const SizedBox(height: 20),
+                      buildIndicator(),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                height: 900,
+                padding: const EdgeInsets.all(10),
+                child: GridView.builder(
+                  physics: ClampingScrollPhysics(),
+                  scrollDirection: Axis.vertical,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 4,
+                    mainAxisSpacing: 4,
+                  ),
+                  itemCount: images.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Image.network(images[index]);
+                  },
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

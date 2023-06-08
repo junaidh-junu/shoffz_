@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 
 import 'package:shoffz/screens/HomePage.dart';
 import 'package:shoffz/screens/MyFavPage.dart';
-import 'package:shoffz/screens/rent/RentPage.dart';
+import 'package:shoffz/screens/RentPage.dart';
 
 import 'package:shoffz/screens/profile.dart';
-import 'package:shoffz/screens/rent/electronics.dart';
+
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
