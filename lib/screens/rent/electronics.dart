@@ -49,6 +49,8 @@ class _ElectronicRentalState extends State<ElectronicRental> {
               SizedBox(height: 16.0),
               TextField(
                 controller: _modelController,
+                keyboardType: TextInputType.multiline,
+                maxLines: null,
                 decoration: InputDecoration(labelText: 'Description'),
               ),
               SizedBox(height: 16.0),

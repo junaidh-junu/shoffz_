@@ -368,7 +368,7 @@ class _HomePageState extends State<HomePage> {
               height: 900,
               padding: const EdgeInsets.all(10),
               child: GridView.builder(
-                // physics: const ScrollPhysics(),
+                physics: NeverScrollableScrollPhysics(),
                 scrollDirection: Axis.vertical,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
