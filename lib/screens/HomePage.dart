@@ -107,10 +107,9 @@ class _HomePageState extends State<HomePage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  "assets/electronic-devicesout.png",
+                                  "assets/electronic-device.png",
                                   height: 35,
                                   width: 35,
-                                  color: Colors.white,
                                 ), // icon
                                 Text("Electronics"), // text
                               ],
@@ -135,10 +134,9 @@ class _HomePageState extends State<HomePage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  "assets/rental.png",
+                                  "assets/car.png",
                                   height: 35,
                                   width: 35,
-                                  color: Colors.white,
                                 ), // icon
 
                                 Text("vehicles"), // text
@@ -167,7 +165,6 @@ class _HomePageState extends State<HomePage> {
                                   "assets/book.png",
                                   height: 35,
                                   width: 35,
-                                  color: Colors.white,
                                 ), //  // icon
                                 Text("Books"), // text
                               ],
@@ -192,10 +189,9 @@ class _HomePageState extends State<HomePage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  "assets/furniture.png",
+                                  "assets/furnitureclr.png",
                                   height: 35,
                                   width: 35,
-                                  color: Colors.white,
                                 ), // text
                                 Text("Furniture"),
                               ],
@@ -223,7 +219,6 @@ class _HomePageState extends State<HomePage> {
                                   "assets/property.png",
                                   height: 35,
                                   width: 35,
-                                  color: Colors.white,
                                 ), // icon
                                 Text("Properties"),
                                 // text
@@ -249,10 +244,9 @@ class _HomePageState extends State<HomePage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  "assets/tools.png",
+                                  "assets/toolsclr.png",
                                   height: 35,
                                   width: 35,
-                                  color: Colors.white,
                                 ),
                                 Text("Tools"), // text
                               ],
