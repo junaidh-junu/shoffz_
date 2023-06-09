@@ -10,238 +10,191 @@ class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        // decoration: const BoxDecoration(
-        //     image: DecorationImage(
-        //         image: AssetImage("assets/background2.jpg"),
-        //         fit: BoxFit.cover)),
-        child: Stack(
-          fit: StackFit.passthrough,
-          children: <Widget>[
-            Positioned(
-              top: 100,
-              left: 40,
-              child: Container(
-                child: Row(
-                  children: [
-                    Text(
-                      "Welcome to ",
-                      style: TextStyle(
-                          fontSize: 35,
-                          color: Colors.green,
-                          fontWeight: FontWeight.w300),
-                    ),
-                  ],
-                ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(10),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 100,
               ),
-            ),
-            Positioned(
-              top: 100,
-              left: 225,
-              child: Container(
-                child: Row(
-                  children: [
-                    Text(
-                      "Shoffz!",
-                      style: TextStyle(
-                          fontSize: 35,
-                          color: Colors.green,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 30,
+                  ),
+                  Text(
+                    "Welcome to ",
+                    style: TextStyle(
+                        fontSize: 35,
+                        color: Colors.green,
+                        fontWeight: FontWeight.w300),
+                  ),
+                  Text(
+                    "RentOn",
+                    style: TextStyle(
+                        fontSize: 35,
+                        color: Colors.green,
+                        fontWeight: FontWeight.bold),
+                  )
+                ],
               ),
-            ),
-            Positioned(
-              top: 140,
-              left: 47,
-              child: Container(
-                child: Row(
-                  children: [
-                    Text(
-                      "Your top stop destination ",
-                      style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.white70,
-                          fontWeight: FontWeight.w200),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
-              top: 210,
-              left: 30,
-              child: Row(children: [
-                SizedBox(
-                    height: 40,
-                    width: 180,
+              SizedBox(height: 50),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 30,
+                  ),
+                  SizedBox(
+                    height: 50,
+                    width: 200,
                     child: ElevatedButton.icon(
+                      onPressed: () {},
                       icon: Icon(
                         Icons.facebook_outlined,
                         color: Colors.green,
                       ),
                       label: const Text(
-                        'FACEBOOK',
+                        "Facebook",
                         style: TextStyle(
                             color: Colors.green, fontWeight: FontWeight.bold),
                       ),
-                      onPressed: () {},
                       style: ElevatedButton.styleFrom(
                           side: BorderSide(width: 1, color: Colors.green),
-                          backgroundColor: Color.fromARGB(0, 0, 0, 0)),
-                    )),
-                SizedBox(
-                  width: 20,
-                ),
-                SizedBox(
-                    height: 40,
-                    width: 160,
+                          backgroundColor: Colors.transparent),
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  SizedBox(
+                    height: 50,
+                    width: 200,
                     child: ElevatedButton.icon(
+                      onPressed: () {},
                       icon: Icon(
                         Icons.g_mobiledata_outlined,
                         color: Colors.green,
-                        size: 30,
                       ),
-                      label: const Text('GOOGLE',
-                          style: TextStyle(
-                              color: Colors.green,
-                              fontWeight: FontWeight.bold)),
-                      onPressed: () {},
+                      label: const Text(
+                        "Google",
+                        style: TextStyle(
+                            color: Colors.green, fontWeight: FontWeight.bold),
+                      ),
                       style: ElevatedButton.styleFrom(
                           side: BorderSide(width: 1, color: Colors.green),
-                          backgroundColor: Color.fromARGB(0, 0, 0, 0)),
-                    )),
-              ]),
-            ),
-            Positioned(
-                top: 285,
-                left: 40,
-                child: Row(children: [
-                  Text(
-                    "__________________ ",
-                    style: TextStyle(color: Colors.white38),
+                          backgroundColor: Colors.transparent),
+                    ),
                   ),
-                ])),
-            Positioned(
-                top: 288,
-                left: 160,
-                child: Row(children: [
-                  Text(
-                    "or login via email",
-                    style: TextStyle(color: Colors.white38, fontSize: 18),
+                ],
+              ),
+              SizedBox(height: 30),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 20,
                   ),
-                ])),
-            Positioned(
-                top: 285,
-                left: 297,
-                child: Row(children: [
                   Text(
-                    "_____________________ ",
-                    style: TextStyle(color: Colors.white38),
+                    "_________________________ ",
+                    style: TextStyle(color: Colors.white),
                   ),
-                ])),
-            Positioned(
-              top: 360,
-              left: 35,
-              child: SizedBox(
-                  width: 380,
-                  height: 50,
-                  child: TextField(
-                    style: TextStyle(color: Colors.green),
-                    decoration: InputDecoration(
+                  Text(
+                    " OR ",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  Text(
+                    " _________________________ ",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
+              ),
+              SizedBox(height: 50),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: TextField(
+                  style: TextStyle(color: Colors.green),
+                  decoration: InputDecoration(
                       suffixIcon: Icon(Icons.clear),
                       labelText: "Email ID",
-                      labelStyle: TextStyle(color: Colors.white70),
+                      labelStyle: TextStyle(color: Colors.white, fontSize: 15),
                       enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white70),
-                      ),
+                          borderSide: BorderSide(color: Colors.white)),
                       focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white70),
-                      ),
-                    ),
-                  )),
-            ),
-            Positioned(
-              top: 435,
-              left: 35,
-              child: SizedBox(
-                  width: 380,
-                  height: 50,
-                  child: TextField(
-                    obscureText: true,
-                    style: TextStyle(color: Colors.green),
-                    decoration: InputDecoration(
-                      suffixIcon: Icon(Icons.remove_red_eye),
-                      hintText: "Password",
-                      hintStyle: TextStyle(color: Colors.white70),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white70),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white70),
-                      ),
-                    ),
-                  )),
-            ),
-            Positioned(
-                top: 490,
-                left: 280,
-                child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      "Forgot Password?",
-                      style: TextStyle(color: Colors.white70, fontSize: 15),
-                    ))),
-            Positioned(
-                top: 560,
-                left: 30,
-                child: SizedBox(
-                    width: 360,
-                    height: 50,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => LandingPage()));
-                      },
-                      child: Text(
-                        "SIGN IN",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.green,
-                          foregroundColor: Colors.black),
-                    ))),
-            Positioned(
-              top: 640,
-              left: 30,
-              child: Row(children: [
-                Text(
-                  "Don't have an account   ",
-                  style: TextStyle(color: Colors.white70, fontSize: 18),
+                          borderSide: BorderSide(color: Colors.white))),
                 ),
-                SizedBox(
-                    height: 40,
-                    width: 100,
-                    child: ElevatedButton(
+              ),
+              SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: TextField(
+                  style: TextStyle(color: Colors.green),
+                  decoration: InputDecoration(
+                      suffixIcon: Icon(Icons.clear),
+                      labelText: "Password",
+                      labelStyle: TextStyle(color: Colors.white, fontSize: 15),
+                      enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white)),
+                      focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white))),
+                ),
+              ),
+              SizedBox(height: 5),
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  "Forgot Password ? ",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 10,
+                  ),
+                  textAlign: TextAlign.end,
+                ),
+              ),
+              SizedBox(
+                width: 150,
+                height: 50,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => LandingPage()));
+                  },
+                  child: Text(
+                    'Sign In',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green,
+                      foregroundColor: Colors.white),
+                ),
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    "Don't have an account ",
+                    style: TextStyle(color: Colors.white, fontSize: 10),
+                  ),
+                  TextButton(
                       onPressed: () {
-                        Navigator.pushReplacement(
+                        Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) => SignUpPage()));
                       },
                       child: Text(
-                        "SIGN UP",
-                      ),
-                      style: ElevatedButton.styleFrom(
-                          side: BorderSide(width: 1, color: Colors.green),
-                          backgroundColor: Color.fromARGB(0, 0, 0, 0)),
-                    )),
-              ]),
-            ),
-          ],
+                        " Sign Up",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            decoration: TextDecoration.underline),
+                      ))
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

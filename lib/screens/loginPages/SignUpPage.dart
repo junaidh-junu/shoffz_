@@ -319,14 +319,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   "Privacy Policy ",
                   style: TextStyle(color: Colors.white),
                 ),
-                // Text(
-                //   "and ",
-                //   style: TextStyle(color: Colors.white70),
-                // ),
-                // Text(
-                //   "EULA",
-                //   style: TextStyle(color: Colors.white),
-                // ),
+           
               ],
             ),
           ),
