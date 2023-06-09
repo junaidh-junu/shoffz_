@@ -1,101 +1,113 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 import 'package:shoffz/screens/loginPages/SignInPage.dart';
 
-String? appbartext = "Profile";
-
-class profile extends StatelessWidget {
-  profile({super.key});
-  final double borderRadius = 25;
-  final primaryColor = Color(0xff2749FD);
+class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Colors.green,
-      //   title: Text("$appbartext"),
-      //   centerTitle: true,
-      // ),
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Padding(padding: EdgeInsets.only(top: 10)),
-            CircleAvatar(
-              child: Icon(
-                Icons.person,
-                size: 120,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Card(
+            elevation: 4,
+            margin: EdgeInsets.all(16),
+            child: Padding(
+              padding: EdgeInsets.all(16),
+              child: Column(
+                children: [
+                  CircleAvatar(
+                    radius: 90,
+                    backgroundImage: AssetImage('assets/book.png'),
+                  ),
+                  SizedBox(height: 16),
+                  Text(
+                    'John Doe',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
-              radius: 100,
-              foregroundColor: Color.fromARGB(255, 0, 0, 0),
             ),
-            Divider(thickness: 0),
-            Text(
-              "Name: ",
-              style: TextStyle(fontWeight: FontWeight.w900, fontSize: 24),
+          ),
+          SizedBox(height: 16),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 16),
+            child: ElevatedButton(
+              onPressed: () {
+                // Handle notification tap
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                textStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                ),
+                padding: EdgeInsets.symmetric(vertical: 16),
+              ),
+              child: ListTile(
+                leading: Icon(Icons.notifications, color: Colors.white),
+                title: Text('Notifications'),
+              ),
             ),
-            Text(
-              "Phone Number: ",
-              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 22),
+          ),
+          SizedBox(height: 16),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 16),
+            child: ElevatedButton(
+              onPressed: () {
+                // Handle edit profile tap
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.orange,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                textStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                ),
+                padding: EdgeInsets.symmetric(vertical: 16),
+              ),
+              child: ListTile(
+                leading: Icon(Icons.edit, color: Colors.white),
+                title: Text('Edit Profile'),
+              ),
             ),
-            Divider(thickness: 0),
-            DecoratedBox(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(borderRadius),
-                    gradient: const LinearGradient(
-                        colors: [Color(0xff53E88B), Color(0xff15BE77)])),
-                child: ElevatedButton(
-                    style: ButtonStyle(
-                        elevation: MaterialStateProperty.all(0),
-                        alignment: Alignment.center,
-                        padding: MaterialStateProperty.all(
-                            const EdgeInsets.only(
-                                right: 75, left: 75, top: 15, bottom: 15)),
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.transparent),
-                        shape: MaterialStateProperty.all(
-                          RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.circular(borderRadius)),
-                        )),
-                    onPressed: () {},
-                    child: Text(
-                      "Edit Profile",
-                      style: const TextStyle(color: Colors.white),
-                    ))),
-            Divider(),
-            DecoratedBox(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(borderRadius),
-                    gradient: const LinearGradient(
-                        colors: [Color(0xff53E88B), Color(0xff15BE77)])),
-                child: ElevatedButton(
-                    style: ButtonStyle(
-                        elevation: MaterialStateProperty.all(0),
-                        alignment: Alignment.center,
-                        padding: MaterialStateProperty.all(
-                            const EdgeInsets.only(
-                                right: 75, left: 75, top: 15, bottom: 15)),
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.transparent),
-                        shape: MaterialStateProperty.all(
-                          RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.circular(borderRadius)),
-                        )),
-                    onPressed: () {
-                      Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => SignInPage()));
-                    },
-                    child: Text(
-                      " Sign Out ",
-                      style: const TextStyle(color: Colors.white),
-                    ))),
-          ],
-        ),
+          ),
+          SizedBox(height: 16),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 16),
+            child: ElevatedButton(
+              onPressed: () {
+                // Handle logout tap
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                textStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                ),
+                padding: EdgeInsets.symmetric(vertical: 16),
+              ),
+              child: ListTile(
+                leading: Icon(Icons.logout, color: Colors.white),
+                title: Text('Logout'),
+                onTap: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => SignInPage()));
+                },
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

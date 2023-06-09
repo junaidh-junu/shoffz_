@@ -22,7 +22,7 @@ class _LandingPageState extends State<LandingPage> {
     HomePage(),
     RentPage(),
     MyFavPage(),
-    profile(),
+    ProfileView(),
   ];
 
   final navigationitems = <Widget>[

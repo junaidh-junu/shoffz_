@@ -358,10 +358,10 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Container(
-              height: 900,
               padding: const EdgeInsets.all(10),
               child: GridView.builder(
-                physics: ScrollPhysics(),
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
                 // scrollDirection: Axis.vertical,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
