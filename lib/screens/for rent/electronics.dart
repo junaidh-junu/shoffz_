@@ -104,6 +104,20 @@ class _ElectronicRentalState extends State<ElectronicRental> {
                 ),
                 SizedBox(height: 16.0),
                 TextFormField(
+                  controller: _priceController,
+                  decoration: InputDecoration(
+                    labelText: "Price (per day) ₹",
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white70),
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white70),
+                    ),
+                  ),
+                  validator: _validatePrice,
+                ),
+                SizedBox(height: 16.0),
+                TextFormField(
                   controller: _descController,
                   decoration: InputDecoration(
                     hintText: 'Describe what you are renting',
@@ -117,20 +131,7 @@ class _ElectronicRentalState extends State<ElectronicRental> {
                   validator: _validateDescription,
                 ),
                 SizedBox(height: 16.0),
-                TextFormField(
-                  controller: _priceController,
-                  decoration: InputDecoration(
-                    labelText: "Price ₹",
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white70),
-                    ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white70),
-                    ),
-                  ),
-                  validator: _validatePrice,
-                ),
-                SizedBox(height: 16.0),
+                
                 TextFormField(
                   controller: _nameController,
                   decoration: InputDecoration(

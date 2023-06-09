@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -114,6 +116,26 @@ class _propertyrentalState extends State<propertyrental> {
               ),
               SizedBox(height: 16.0),
               TextFormField(
+                controller: _priceController,
+                decoration: InputDecoration(
+                  labelText: 'Price',
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white70),
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white70),
+                  ),
+                ),
+                keyboardType: TextInputType.number,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter the price';
+                  }
+                  return null;
+                },
+              ),
+              SizedBox(height: 26.0),
+              TextFormField(
                 controller: _descriptionController,
                 decoration: InputDecoration(
                   labelText: 'Description',
@@ -191,26 +213,6 @@ class _propertyrentalState extends State<propertyrental> {
                 },
               ),
               SizedBox(height: 16.0),
-              TextFormField(
-                controller: _priceController,
-                decoration: InputDecoration(
-                  labelText: 'Price',
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white70),
-                  ),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white70),
-                  ),
-                ),
-                keyboardType: TextInputType.number,
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter the price';
-                  }
-                  return null;
-                },
-              ),
-              SizedBox(height: 26.0),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green,
