@@ -17,6 +17,10 @@ List<String> images = [
   "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
   "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
   "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
+  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
 ];
 
 int activeIndex = 0;
@@ -85,59 +89,61 @@ class _HomePageState extends State<HomePage> {
             // SizedBox(
             //   height: 50,
             // ),
-            Container(
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    SizedBox(
-                      // width: 10,
-                      height: 50,
-                    ),
-                    Column(
-                      children: [
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Container(
-                          child: InkWell(
-                            splashColor: Colors.green, // splash color
-                            onTap: () {}, // button pressed
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Image.asset(
-                                  "assets/electronic-device.png",
-                                  height: 35,
-                                  width: 35,
-                                ), // icon
-                                Text("Electronics"), // text
-                              ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        // width: 10,
+                        height: 50,
+                      ),
+                      Column(
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            child: InkWell(
+                              splashColor: Colors.green, // splash color
+                              onTap: () {}, // button pressed
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Image.asset(
+                                    "assets/electronic-device.png",
+                                    height: 35,
+                                    width: 35,
+                                  ), // icon
+                                  Text("Electronics"), // text
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      children: [
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Container(
-                          child: InkWell(
-                            splashColor: Colors.green, // splash color
-                            onTap: () {}, // button pressed
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Image.asset(
-                                  "assets/car.png",
-                                  height: 35,
-                                  width: 35,
-                                ), // icon
+                        ],
+                      ),
+                      SizedBox(
+                        width: 30,
+                      ),
+                      Column(
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            child: InkWell(
+                              splashColor: Colors.green, // splash color
+                              onTap: () {}, // button pressed
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Image.asset(
+                                    "assets/car.png",
+                                    height: 35,
+                                    width: 35,
+                                  ), // icon
 
                                 Text("vehicles"), // text
                               ],
@@ -259,7 +265,6 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-
             SizedBox(
               height: 20,
             ),
@@ -359,11 +364,10 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Container(
-              height: 900,
               padding: const EdgeInsets.all(10),
               child: GridView.builder(
-                physics: NeverScrollableScrollPhysics(),
-                scrollDirection: Axis.vertical,
+                physics: ScrollPhysics(),
+                // scrollDirection: Axis.vertical,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 4,

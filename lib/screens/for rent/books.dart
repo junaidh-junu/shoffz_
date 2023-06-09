@@ -74,6 +74,25 @@ class _BookRentalState extends State<BookRental> {
                 ),
                 SizedBox(height: 16.0),
                 TextFormField(
+                  controller: _priceController,
+                  decoration: InputDecoration(
+                    labelText: "Price (per day) ₹",
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white70),
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white70),
+                    ),
+                  ),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter a price';
+                    }
+                    return null;
+                  },
+                ),
+                SizedBox(height: 16.0),
+                TextFormField(
                   controller: _descController,
                   decoration: InputDecoration(
                     hintText: 'Describe the book your are renting',
@@ -87,25 +106,6 @@ class _BookRentalState extends State<BookRental> {
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Please enter a description';
-                    }
-                    return null;
-                  },
-                ),
-                SizedBox(height: 16.0),
-                TextFormField(
-                  controller: _priceController,
-                  decoration: InputDecoration(
-                    labelText: "Price  ₹",
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white70),
-                    ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white70),
-                    ),
-                  ),
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter a price';
                     }
                     return null;
                   },

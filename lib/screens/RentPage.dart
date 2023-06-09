@@ -4,6 +4,7 @@ import 'package:shoffz/screens/for%20rent/electronics.dart';
 import 'package:shoffz/screens/for%20rent/furniture.dart';
 import 'package:shoffz/screens/for%20rent/property.dart';
 import 'package:shoffz/screens/for%20rent/tools.dart';
+import 'package:shoffz/screens/for%20rent/vehicles.dart';
 
 class RentPage extends StatefulWidget {
   const RentPage({super.key});
@@ -79,7 +80,10 @@ class _RentPageState extends State<RentPage> {
                   ),
                   child: InkWell(
                     splashColor: Colors.green, // splash color
-                    onTap: () {}, // button pressed
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => CarRental()));
+                    }, // button pressed
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
