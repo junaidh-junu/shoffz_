@@ -40,15 +40,14 @@ class SignInPage extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 50),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 30,
-                  ),
-                  SizedBox(
-                    height: 50,
-                    width: 200,
-                    child: ElevatedButton.icon(
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 30,
+                    ),
+                    ElevatedButton.icon(
                       onPressed: () {},
                       icon: Icon(
                         Icons.facebook_outlined,
@@ -63,12 +62,8 @@ class SignInPage extends StatelessWidget {
                           side: BorderSide(width: 1, color: Colors.green),
                           backgroundColor: Colors.transparent),
                     ),
-                  ),
-                  SizedBox(width: 20),
-                  SizedBox(
-                    height: 50,
-                    width: 200,
-                    child: ElevatedButton.icon(
+                    SizedBox(width: 20),
+                    ElevatedButton.icon(
                       onPressed: () {},
                       icon: Icon(
                         Icons.g_mobiledata_outlined,
@@ -83,28 +78,30 @@ class SignInPage extends StatelessWidget {
                           side: BorderSide(width: 1, color: Colors.green),
                           backgroundColor: Colors.transparent),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               SizedBox(height: 30),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "_________________________ ",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  Text(
-                    " OR ",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  Text(
-                    " _________________________ ",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ],
+              Center(
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 30,
+                    ),
+                    Text(
+                      "_______________________ ",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Text(
+                      " OR ",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Text(
+                      " _______________________ ",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(height: 50),
               Padding(
