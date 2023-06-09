@@ -9,7 +9,6 @@ import 'package:shoffz/screens/RentPage.dart';
 
 import 'package:shoffz/screens/profile.dart';
 
-
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
 
@@ -58,7 +57,7 @@ class _LandingPageState extends State<LandingPage> {
       extendBody: true,
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: Text("$appbartext"),
+        title: Text("shoffz"),
         centerTitle: true,
         actions: [
           Padding(

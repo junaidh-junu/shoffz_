@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shoffz/screens/rent/electronics.dart';
+import 'package:shoffz/screens/for%20rent/books.dart';
+import 'package:shoffz/screens/for%20rent/electronics.dart';
+import 'package:shoffz/screens/for%20rent/furniture.dart';
+import 'package:shoffz/screens/for%20rent/property.dart';
+import 'package:shoffz/screens/for%20rent/tools.dart';
 
 class RentPage extends StatefulWidget {
   const RentPage({super.key});
@@ -14,6 +18,20 @@ class _RentPageState extends State<RentPage> {
     return SingleChildScrollView(
       child: Container(
           child: Column(children: [
+        Padding(
+          padding: EdgeInsets.only(left: 100, bottom: 20),
+        ),
+        Column(
+          children: [
+            Text(
+              "What are you offering?",
+              style: TextStyle(fontSize: 20),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 100, bottom: 10),
+            ),
+          ],
+        ),
         Container(
             width: 450,
             height: 800,
@@ -87,12 +105,17 @@ class _RentPageState extends State<RentPage> {
                   ),
                   child: InkWell(
                     splashColor: Colors.green, // splash color
-                    onTap: () {}, // button pressed
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => BookRental()));
+                    }, // button pressed
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Image.asset(
-                          "assets/book.png",
+                          "assets/bookbw.png",
                           height: 60,
                           width: 60,
                           color: Colors.white,
@@ -112,7 +135,12 @@ class _RentPageState extends State<RentPage> {
                   ),
                   child: InkWell(
                     splashColor: Colors.green, // splash color
-                    onTap: () {}, // button pressed
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => furnitureRental()));
+                    }, // button pressed
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -137,12 +165,17 @@ class _RentPageState extends State<RentPage> {
                   ),
                   child: InkWell(
                     splashColor: Colors.green, // splash color
-                    onTap: () {}, // button pressed
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => propertyrental()));
+                    }, // button pressed
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Image.asset(
-                          "assets/property.png",
+                          "assets/propertybw.png",
                           height: 60,
                           width: 60,
                           color: Colors.white,
@@ -163,7 +196,12 @@ class _RentPageState extends State<RentPage> {
                   ),
                   child: InkWell(
                     splashColor: Colors.green, // splash color
-                    onTap: () {}, // button pressed
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => toolsRental()));
+                    }, // button pressed
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
