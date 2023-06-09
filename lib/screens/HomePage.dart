@@ -1,14 +1,10 @@
-// ignore_for_file: dead_code
+// ignore_for_file: dead_code, prefer_const_constructors
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 List<String> images = [
-  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
-  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
-  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
-  "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
   "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
   "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
   "https://static.javatpoint.com/tutorial/flutter/images/flutter-logo.png",
@@ -46,7 +42,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      // physics: const ScrollPhysics(),
+      physics: const ScrollPhysics(),
       scrollDirection: Axis.vertical,
       child: Container(
         child: Column(
@@ -61,15 +57,15 @@ class _HomePageState extends State<HomePage> {
                     height: 10,
                     width: 10,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 10,
                   ),
-                  const Text(
+                  Text(
                     "Palarivattom,kochi",
                     style: TextStyle(),
                   ),
-                  const SizedBox(
-                    width: 100,
+                  SizedBox(
+                    width: 70,
                   ),
                   DropdownButton(
                       value: dropvalue,
@@ -89,61 +85,59 @@ class _HomePageState extends State<HomePage> {
             // SizedBox(
             //   height: 50,
             // ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      SizedBox(
-                        // width: 10,
-                        height: 50,
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Container(
-                            child: InkWell(
-                              splashColor: Colors.green, // splash color
-                              onTap: () {}, // button pressed
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  Image.asset(
-                                    "assets/electronic-device.png",
-                                    height: 35,
-                                    width: 35,
-                                  ), // icon
-                                  Text("Electronics"), // text
-                                ],
-                              ),
+            Container(
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    SizedBox(
+                      // width: 10,
+                      height: 50,
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          child: InkWell(
+                            splashColor: Colors.green, // splash color
+                            onTap: () {}, // button pressed
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  "assets/electronic-device.png",
+                                  height: 35,
+                                  width: 35,
+                                ), // icon
+                                Text("Electronics"), // text
+                              ],
                             ),
                           ),
-                        ],
-                      ),
-                      SizedBox(
-                        width: 30,
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Container(
-                            child: InkWell(
-                              splashColor: Colors.green, // splash color
-                              onTap: () {}, // button pressed
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  Image.asset(
-                                    "assets/car.png",
-                                    height: 35,
-                                    width: 35,
-                                  ), // icon
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          child: InkWell(
+                            splashColor: Colors.green, // splash color
+                            onTap: () {}, // button pressed
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  "assets/car.png",
+                                  height: 35,
+                                  width: 35,
+                                ), // icon
 
                                 Text("vehicles"), // text
                               ],
@@ -364,6 +358,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Container(
+              height: 900,
               padding: const EdgeInsets.all(10),
               child: GridView.builder(
                 physics: ScrollPhysics(),
@@ -378,7 +373,7 @@ class _HomePageState extends State<HomePage> {
                   return Image.network(images[index]);
                 },
               ),
-            )
+            ),
           ],
         ),
       ),
